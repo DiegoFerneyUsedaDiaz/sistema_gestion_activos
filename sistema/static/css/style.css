@@ -77,10 +77,21 @@ header{
     flex-direction: column;
 }
 
+.menu.menu-toggle div:first-child{
+    width: 40%;
+    transform: rotate(-35deg) translate(-30%,175%);
+}
+
+.menu.menu-toggle div:last-child{
+    width: 40%;
+    transform: rotate(35deg) translate(-30%, -160%);
+}
+
 .menu div{
     width: 100%;
     height: 0.15rem;
     background-color: var(--icon-menu-color);
+    transition: all 0.2s ease;
 }
 
 /*brand styles*/
@@ -153,6 +164,7 @@ header{
     border-right: 1 px solid var(--border-color);
     overflow-y: auto;
     background-color: var(--background-color);
+    transition: width 0.5s ease;
 }
 
 .sidebar.menu-toggle{
@@ -188,4 +200,46 @@ header{
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 0.2rem;
 
+}
+
+/*main styles*/
+main{
+    margin-top: 4rem;
+    margin-left: 4rem;
+    padding: 2rem;
+    transition: padding-left 0.5s ease;
+   
+}
+
+main.menu-toggle{
+    padding-left: 18.75rem;
+}
+
+/*Responsive styles*/
+@media (max-width: 500px) {
+    .right .icons-header{
+        display: none;
+    }   
+    .sidebar{
+        width: 0;
+    }
+    main{
+        margin-left: 0;
+    }
+
+    main.menu-toggle{
+        margin-left: 0;
+    }
+    
+    .menu.menu-toggle div:first-child{
+        width: 100%;
+        transform: rotate(-45deg) translate(-0.2rem,0.3rem);
+    }
+    .menu.menu-toggle div:nth-child(2){
+        opacity: 0;
+    }
+    .menu.menu-toggle div:last-child{
+        width: 100%;
+        transform: rotate(45deg) translate(-0.2rem,-0.3rem);
+    }
 }

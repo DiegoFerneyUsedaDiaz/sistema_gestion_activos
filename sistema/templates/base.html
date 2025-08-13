@@ -33,13 +33,13 @@
                 
 
             <div class="right">
-                <a href="#">
+                <a href="#" class="icons-header">
                     <img src="{% static 'icons/chat.svg' %}" alt="chat"/>
                 </a>
-                <a href="#">
+                <a href="#" class="icons-header">
                     <img src="{% static 'icons/question.svg' %}" alt="question"/>
                 </a>
-                <a href="#">
+                <a href="#" class="icons-header">
                     <img src="{% static 'icons/notification.svg' %}" alt="notification"/>
                 </a>
                 <img src="{% static 'icons/user.svg' %}" alt="img-user" class="user"/>
@@ -93,11 +93,16 @@
                     </ul>            
                 </nav>
         </div>
-
-      
+        <main id="main">
+                <h1>Bienvenido al Sistema de Gestión de Activos</h1>
+                <p>Este es un sistema para gestionar los activos de la empresa.</p>
+            </div>
             
-       {% block container%}
-         {% endblock %}
+        </main>
+      
+            {% block container%}
+             {% endblock %}
+       
         
         <script src="{% static 'js/script.js' %}"></script>   
     </body>
