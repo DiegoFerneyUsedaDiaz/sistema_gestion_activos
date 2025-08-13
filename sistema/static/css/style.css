@@ -136,4 +136,51 @@ header{
     width: 2.1rem;
     border-radius: 30% ;
 }   
+/*sidebar styles*/
+.sidebar img{
+    width: 1.6rem;
+}
 
+.sidebar{
+    margin-top: 4rem;
+    width: 18.75rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;    
+    z-index: 100;
+    padding: 1.1rem 0;
+    border-right: 1 px solid var(--border-color);
+    overflow-y: auto;
+    background-color: var(--background-color);
+}
+
+.sidebar a{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    padding: 0.9rem 0.7rem;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+.siderbar a:hover{
+    background-color: var(--backgground-hover);
+}
+
+.sidebar a.selected{
+    background-color: var(--background-selected);
+    color: var(--text-selected-color);
+    
+}
+
+.sidebar a.search{    
+    padding: 1rem 0.7rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0.2rem;
+
+}

@@ -26,7 +26,7 @@
                 </div>
                 <div class="brand">
                     <img src="{% static 'icons/udemy.svg' %}" alt="icon-udemy" class="logo" />
-                    <span class="name">Apex</span>
+                    <span class="name">Fecadi</span>
                 </div>
             </div>
             
@@ -45,10 +45,57 @@
                 <img src="{% static 'icons/user.svg' %}" alt="img-user" class="user"/>
             </div> 
         </header>
+        <div class="sidebar">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#" class="search">
+                                <img src="{% static 'icons/search1.svg' %}" alt="" />
+                                <span>Buscar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class= "selected">
+                                <img src="{% static 'icons/dashboard.svg' %}" alt="" />
+                                <span>Pagina de Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="{% static 'icons/pc.svg' %}" alt="" />
+                                <span>Equipos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="{% static 'icons/repuesto.svg' %}" alt="" />
+                                <span>Repuestos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="{% static 'icons/informe.svg' %}" alt="" />
+                                <span>Informes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="{% static 'icons/money.svg' %}" alt="" />
+                                <span>Presupuesto</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="{% static 'icons/tool.svg' %}" alt="" />
+                                <span>Herramientas</span>
+                            </a>
+                        </li>
+                    </ul>            
+                </nav>
+        </div>
 
-
-
-
+      
+            
        {% block container%}
          {% endblock %}
         
