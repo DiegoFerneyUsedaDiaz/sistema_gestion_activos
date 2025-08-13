@@ -18,7 +18,7 @@
         <header>
             <div class="left">
                 <div class="menu-container">
-                    <div class="menu">
+                    <div class="menu" id="menu">
                         <div></div>
                         <div></div>
                         <div></div>    
@@ -45,7 +45,7 @@
                 <img src="{% static 'icons/user.svg' %}" alt="img-user" class="user"/>
             </div> 
         </header>
-        <div class="sidebar">
+        <div class="sidebar " id="sidebar">
                 <nav>
                     <ul>
                         <li>
@@ -99,6 +99,6 @@
        {% block container%}
          {% endblock %}
         
-        
+        <script src="{% static 'js/script.js' %}"></script>   
     </body>
 </html>
