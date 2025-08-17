@@ -24,7 +24,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
     
 }
 
@@ -45,7 +45,7 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0.45rem 2rem 0.45rem 1.27rem;
+    padding: 0.25rem 2rem 0.25rem 1.17rem;
     border-bottom: 1px solid var(--border-color);
     position: fixed;
     background-color: var(--background-color);
@@ -105,11 +105,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
+    gap: 0.5rem;
 }
 
 .brand .logo{
-    width: 1.7rem;
+    width: 1.5rem;
 }
 
 .brand .name{
