@@ -46,43 +46,49 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="#" class="search">
+                            <a href="#" class="search" title="Buscar">
                                 <img src="{% static 'icons/search1.svg' %}" alt="" />
                                 <span>Buscar</span>
                             </a>
                         </li>
                         <li>
-                            <a href="{% url 'sistema:index' %}" class= "selected">
+                            <a href="{% url 'sistema:index' %}" class= "selected" title="Pagina de Inicio">
                                 <img src="{% static 'icons/dashboard.svg' %}" alt="" />
                                 <span>Pagina de Inicio</span>
                             </a>
                         </li>
                         <li>
-                            <a href="{% url 'sistema:computer' %}">
+                            <a href="{% url 'sistema:computer' %}" title="Computadores">
                                 <img src="{% static 'icons/pc.svg' %}" alt="" />
-                                <span>Equipos</span>
+                                <span>Computadores</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" title="Repuestos">
                                 <img src="{% static 'icons/repuesto.svg' %}" alt="" />
                                 <span>Repuestos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" title="Accesorios">
+                                <img src="{% static 'icons/accesories.svg' %}" alt="" />
+                                <span>Accesorios</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Informes">
                                 <img src="{% static 'icons/informe.svg' %}" alt="" />
                                 <span>Informes</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <img src="{% static 'icons/money.svg' %}" alt="" />
-                                <span>Presupuesto</span>
+                            <a href="#" title="Compras">
+                                <img src="{% static 'icons/compras.svg' %}" alt="" />
+                                <span>Compras</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" title="Herramientas">
                                 <img src="{% static 'icons/tool.svg' %}" alt="" />
                                 <span>Herramientas</span>
                             </a>

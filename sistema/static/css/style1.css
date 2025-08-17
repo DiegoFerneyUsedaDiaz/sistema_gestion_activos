@@ -30,13 +30,18 @@ body {
     position: fixed;
     display: flex;
     flex-direction: column;
-    width: 15rem;
     align-items: center;
+    width: 15rem;
     height: 100%;
-    padding: 1.4rem 1rem;
+    padding: 1.4rem 1rem 0 1rem;
     background-color: var(--color-surface);
     box-shadow: 1px 0 10px var(--shadow-border);
     transition: width 0.5s ease;
+}
+
+/*Header */
+.header{
+    width: 100%;
 }
 
 /*Menu Buttons */
@@ -87,6 +92,7 @@ body {
 
 .menu-container {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
 }
@@ -131,4 +137,76 @@ body {
 
 .brand .logo{
     width: 2rem;
+}
+
+/*Menu Items */
+
+.menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu .menu-item {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+}
+
+.menu .menu-link {
+    display: flex;
+    padding: 0.55rem 0;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    border-radius: 0.3rem;
+}
+
+.menu-item:hover .menu-link, 
+.sub-menu .sub-menu-link:hover,
+.menu-item.active .menu-link {
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+}
+
+.menu-item .menu-link img {
+    width: 1.35rem;
+    margin-right: 0.5rem;
+    margin-left: 0.8rem;
+}
+
+.menu-link i {
+    font-size: 1.35rem;
+    padding: 0 0.8rem;
+}
+
+.menu-link i:last-child {
+    margin-left: auto;
+}
+
+.menu-link span {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/*seubmenu */
+
+.sub-menu .sub-menu-link {
+    display: flex;
+    margin-left: 2.5rem;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.2rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    border-radius: 0.3rem;
+}
+
+.sub-menu::before {
+    content: '';
+    position: absolute;
+    width: 0.07rem;
+    height: 100%;
+    margin-left: 1.4rem;
+    background-color: var(--color-border);
 }
