@@ -31,33 +31,40 @@
                 </div>
                 <ul class="menu">
                     <li class="menu-item menu-item-static active">
-                        <a href="#" class="menu-link">
+                        <a href="{% url 'sistema:index' %}"  class="menu-link">
                             <i class='bx bx-home-alt-2'></i>
-                            <span>Home</span>
+                            <span>Inicio</span>
                         </a>
                     </li>
                     <li class="menu-item menu-item-dropdown">
                         <a href="#" class="menu-link">
-                            <i class='bx bx-shopping-bag'></i>
+                            <i class='bx  bx-desktop'  ></i>  
                             <span>Computadores</span>
                             <i class='bx bx-chevron-down'></i>
                         </a>
                     <ul class="sub-menu">
-                        <li><a href="#" class="sub-menu-link">Products</a></li>
-                        <li><a href="#" class="sub-menu-link">Orders</a></li>
-                        <li><a href="#" class="sub-menu-link">Subscriptions</a></li>
+                        <li><a href="{% url 'sistema:computer' %}" class="sub-menu-link">Todos</a></li>
+                        <li><a href="#" class="sub-menu-link">Asignados</a></li>
+                        <li><a href="#" class="sub-menu-link">Solicitados</a></li>
+                        <li><a href="#" class="sub-menu-link">De Baja</a></li>
                     </ul>
                     </li>
                     <li class="menu-item menu-item-static">
                         <a href="#" class="menu-link">
-                            <i class='bx bx-task'></i>
-                            <span>Task</span>
+                            <i class='bx  bx-chip'  ></i>  
+                            <span>Repuestos</span>
+                        </a>
+                    </li>
+                    <li class="menu-item menu-item-static">
+                        <a href="#" class="menu-link">
+                            <i class='bx  bx-save'  ></i>   
+                            <span>Accesorios</span>
                         </a>
                     </li>
                     <li class="menu-item menu-item-dropdown">
                         <a href="#" class="menu-link">
                             <i class='bx bx-file-blank' ></i>
-                            <span>File</span>
+                            <span>Informes</span>
                         </a>
                     </li>
                 </ul>       
