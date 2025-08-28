@@ -2,6 +2,12 @@ const menusItemsDropDown = document.querySelectorAll('.menu-item-dropdown');
 const menusItemsStatic = document.querySelectorAll('.menu-item-static');
 const sidebar = document.getElementById('sidebar');
 const menuBtn = document.getElementById('menu-btn');
+const darkModeBtn = document.getElementById('dark-mode-btn');
+
+
+darkModeBtn.addEventListener('click',()=>{
+    document.body.classList.toggle('dark-mode');
+});
 
 menuBtn.addEventListener('click',()=>{
     sidebar.classList.toggle('minimize');

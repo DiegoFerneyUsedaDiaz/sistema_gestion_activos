@@ -28,6 +28,7 @@ body.dark-mode{
     --shadow-border: rgba(255, 255, 255, 0.1);
     --user-bg-color: #FAFAFC;
 }
+
 /* Body */
 body {
     display: flex;
@@ -37,6 +38,8 @@ body {
     transition: color 0.5s ease,
     background-color 0.3s ease,left 0.5s ease;
 }
+
+
 
 .sidebar{
     position: fixed;
@@ -308,8 +311,62 @@ body {
     color: var(--color-text-secondary);
 }
 
-/* Sub menu*/
-.sub-menu{
-    height: 0; 
-    transition: all 0.3s ease;
+main{
+    padding: 2rem 3rem 3rem 17rem;
+    transition: padding 0.5s ease;
+}
+
+main{
+    color: var(--color-text-primary);
+}
+
+.sidebar.minimize + main{
+    padding-left: 7.96rem;
+}
+
+/*dark mode*/
+
+.brand-dark{
+    display: none;
+}
+
+body.dark-mode .brand-dark{
+    display: block;
+}
+
+body.dark-mode .brand-light{
+    display: none;
+}
+
+.dark-mode-btn{
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    bottom: 2rem;
+    right: 2rem;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px var(--shadow-border);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.dark-mode-btn i{
+    position: absolute;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in;
+}
+.dark-mode-btn i:last-child{
+    transform: translateY(150%);   
+}
+
+body.dark-mode .dark-mode-btn i:last-child{
+    transform: translateY(0%);
+}
+
+body.dark-mode .dark-mode-btn i:first-child{
+    transform: translateY(-150%);
 }

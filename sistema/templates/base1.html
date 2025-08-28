@@ -9,13 +9,18 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <div class="dark-mode-btn" id="dark-mode-btn">
+        <i class='bx bx-moon'></i>
+        <i class='bx bx-sun'></i>
+    </div>
     <div class="sidebar" id="sidebar">
         <div class="header">
             <div class="menu-btn" id="menu-btn">
                 <i class='bx bx-chevron-left'></i>
             </div>
             <div class="brand">
-                <img src="{% static 'icons/brand-light.svg' %}" alt="">
+                <img class="brand-light" src="{% static 'icons/brand-light.svg' %}" alt="">
+                <img class="brand-dark" src="{% static 'icons/brand-dark.svg' %}" alt="">
                 <span>Fecadi</span>
             </div>
         </div>
@@ -86,6 +91,10 @@
                 </div>
             </div>
     </div>
+    <main>
+        {% block container %}
+        {% endblock %}
+    </main>
      <script src="{% static 'js/script1.js' %}"></script> 
   </body>
 </html>
