@@ -1,4 +1,5 @@
 from django.urls import path
+from django.contrib import admin
 from django.views.generic import TemplateView
 
 
@@ -9,4 +10,5 @@ urlpatterns = [
     path('repuestos/', TemplateView.as_view(template_name='repuestos.html'), name='repuestos'),
     path('accesorios/', TemplateView.as_view(template_name='accesorios.html'), name='accesorios'),
     path('informes/', TemplateView.as_view(template_name='informes.html'), name='informes'),
+    path('admin/', admin.site.urls),
     ]
