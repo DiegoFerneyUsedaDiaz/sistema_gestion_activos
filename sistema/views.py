@@ -4,6 +4,6 @@ from sistema.models import Activos
 
 # Create your views here.
 
-def lista_activos(request):
+def computer(request):
     activos = Activos.objects.all()
     return render(request, "computer.html", {"activos": activos})

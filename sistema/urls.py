@@ -12,5 +12,5 @@ urlpatterns = [
     path('accesorios/', TemplateView.as_view(template_name='accesorios.html'), name='accesorios'),
     path('informes/', TemplateView.as_view(template_name='informes.html'), name='informes'),
     path('admin/', admin.site.urls),
-    path("activos/", views.lista_activos, name="lista_activos"),
+    path("activos", views.computer, name="computer"),
     ]
