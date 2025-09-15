@@ -1,6 +1,54 @@
 {% extends 'base1.html' %} {% block container%}
     
-         <h1>Equipos de Computo</h1>
-            <p>En esta pagina podremos visualizar todos los activos</p>
-     
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Activos</title>
+</head>
+<body>
+    <h1>Lista de Activos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Fecha de Adquisición</th>
+                <th>Valor</th>
+                <th>Tipo</th>
+                <th>Ubicación</th>
+                <th>Estado</th>
+                <th>Empleado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for activo in activos %}
+            <tr>
+                <td>{{ activo.id }}</td>
+                <td>{{ activo.nombre }}</td>
+                <td>{{ activo.marca }}</td>
+                <td>{{ activo.modelo }}</td>
+                <td>{{ activo.fecha_adquisicion }}</td>
+                <td>{{ activo.valor }}</td>
+                <td>{{ activo.Tipo_activo }}</td>
+                <td>{{ activo.Ubicacion }}</td>
+                <td>{{ activo.Estado }}</td>
+                <td>{{ activo.Empleado }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="10">No hay activos registrados.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+    
 {% endblock %}  
+
+ 
