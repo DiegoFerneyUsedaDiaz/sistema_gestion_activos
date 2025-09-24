@@ -7,3 +7,4 @@ from sistema.models import Activos
 def computer(request):
     activos = Activos.objects.all()
     return render(request, "computer.html", {"activos": activos})
+
