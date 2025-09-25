@@ -1,78 +1,70 @@
 {% extends 'base1.html' %}
 {% block container %}
 
-<div class="container mt-4">
+<div class="container">
     <!-- Encabezado con total de dispositivos -->
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="fw-bold">Lista de Activos</h2>
-        <div class="badge bg-primary fs-6">
+    <div class="header">
+        <h2>Equipos de Computo</h2>
+        <div class="badge">
             Total de dispositivos: {{ activos|length }}
         </div>
-        <a href="" class="btn btn-success">
-            ➕ Agregar nuevo
-        </a>
+        <a href="" class="btn btn-success">➕ Agregar nuevo</a>
     </div>
 
     <!-- Tabla de activos -->
-    <div class="card shadow-sm">
-        <div class="card-body p-0">
-            <table class="table table-hover table-striped mb-0 align-middle">
-                <thead class="table-dark">
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Marca</th>
-                        <th>Modelo</th>
-                        <th>Fecha de Adquisición</th>
-                        <th>Valor</th>
-                        <th>Tipo</th>
-                        <th>Ubicación</th>
-                        <th>Estado</th>
-                        <th>Empleado</th>
-                        <th class="text-center">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for activo in activos %}
-                    <tr>
-                        <td>{{ activo.id }}</td>
-                        <td>{{ activo.nombre }}</td>
-                        <td>{{ activo.marca }}</td>
-                        <td>{{ activo.modelo }}</td>
-                        <td>{{ activo.fecha_adquisicion }}</td>
-                        <td>${{ activo.valor|floatformat:2 }}</td>
-                        <td>{{ activo.Tipo_activo }}</td>
-                        <td>{{ activo.Ubicacion }}</td>
-                        <td>
-                            <span class="badge {% if activo.Estado == 'Activo' %} bg-success 
-                                                 {% elif activo.Estado == 'En reparación' %} bg-warning 
-                                                 {% else %} bg-secondary {% endif %}">
-                                {{ activo.Estado }}
-                            </span>
-                        </td>
-                        <td>{{ activo.Empleado }}</td>
-                        <td class="text-center">
-                            <a href="" class="btn btn-sm btn-primary">
-                                ✏️ Editar
-                            </a>
-                            <a href="" class="btn btn-sm btn-danger" 
-                               onclick="return confirm('¿Seguro que deseas eliminar este activo?');">
-                                🗑️ Eliminar
-                            </a>
-                        </td>
-                    </tr>
-                    {% empty %}
-                    <tr>
-                        <td colspan="11" class="text-center text-muted py-3">
-                            No hay activos registrados.
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+    <div class="card">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Fecha de Adquisición</th>
+                    <th>Valor</th>
+                    <th>Tipo</th>
+                    <th>Ubicación</th>
+                    <th>Estado</th>
+                    <th>Empleado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for activo in activos %}
+                <tr>
+                    <td>{{ activo.id }}</td>
+                    <td>{{ activo.nombre }}</td>
+                    <td>{{ activo.marca }}</td>
+                    <td>{{ activo.modelo }}</td>
+                    <td>{{ activo.fecha_adquisicion }}</td>
+                    <td>${{ activo.valor|floatformat:2 }}</td>
+                    <td>{{ activo.Tipo_activo }}</td>
+                    <td>{{ activo.Ubicacion }}</td>
+                    <td>
+                        <span class="estado 
+                            {% if activo.Estado == 'Activo' %} verde 
+                            {% elif activo.Estado == 'En reparación' %} amarillo 
+                            {% else %} gris {% endif %}">
+                            {{ activo.Estado }}
+                        </span>
+                    </td>
+                    <td>{{ activo.Empleado }}</td>
+                    <td>
+                        <a href="" class="btn btn-edit">✏️ Editar</a>
+                        <a href="" class="btn btn-delete" onclick="return confirm('¿Seguro que deseas eliminar este activo?');">🗑️ Eliminar</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="11" class="no-data">No hay activos registrados.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 </div>
+
+
 
 {% endblock %}
 

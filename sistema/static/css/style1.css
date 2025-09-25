@@ -370,3 +370,114 @@ body.dark-mode .dark-mode-btn i:last-child{
 body.dark-mode .dark-mode-btn i:first-child{
     transform: translateY(-150%);
 }
+
+
+/* Estilos específicos para la tabla de Activos */
+/* Contenedor principal */
+.container {
+    width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+.badge {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+/* Botones */
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+.btn-edit {
+    background-color: #007bff;
+    color: white;
+    margin-right: 5px;
+}
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Tarjeta */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+     min-width: 800px; 
+}
+.table th, .table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+.table th {
+    background-color: #343a40;
+    color: white;
+}
+.table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Estados */
+.estado {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.estado.verde {
+    background-color: #28a745;
+    color: white;
+}
+.estado.amarillo {
+    background-color: #ffc107;
+    color: black;
+}
+.estado.gris {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Mensaje vacío */
+.no-data {
+    text-align: center;
+    padding: 15px;
+    color: #888;
+}
