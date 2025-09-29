@@ -13,4 +13,6 @@ urlpatterns = [
     path('informes/', TemplateView.as_view(template_name='informes.html'), name='informes'),
     path('admin/', admin.site.urls),
     path("activos", views.computer, name="computer"),
+    path('crear/', views.crear_activo, name='crear_activo'),
+
     ]

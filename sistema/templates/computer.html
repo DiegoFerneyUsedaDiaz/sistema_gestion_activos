@@ -8,7 +8,7 @@
         <div class="badge">
             Total de dispositivos: {{ activos|length }}
         </div>
-        <a href="" class="btn btn-success">➕ Agregar nuevo</a>
+        <a href="{% url 'sistema:crear_activo' %}" class="btn btn-success">➕ Agregar nuevo</a>
     </div>
 
     <!-- Tabla de activos -->

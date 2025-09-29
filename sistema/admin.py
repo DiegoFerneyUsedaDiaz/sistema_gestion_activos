@@ -4,6 +4,8 @@ from django.contrib import admin
 from .models import  Tipo_activo, Ubicacion, Estado, Empleado ,Activos
 
       
+      
+      
 @admin.register(Tipo_activo)
 class Tipo_activoAdmin(admin.ModelAdmin):
     list_display = ('id', 'nombre')

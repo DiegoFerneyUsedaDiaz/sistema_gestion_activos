@@ -1,0 +1,15 @@
+{% extends 'base1.html' %}
+{% block container %}
+
+<div class="container">
+    <h2>➕ Agregar Nuevo Activo</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit" class="btn btn-success">💾 Guardar</button>
+        <a href="{% url 'sistema:computer' %}" class="btn btn-delete">❌ Cancelar</a>
+    </form>
+</div>
+
+{% endblock %}
